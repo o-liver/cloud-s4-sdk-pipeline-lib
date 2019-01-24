@@ -20,7 +20,7 @@ def call(Map parameters) {
         defaultMavenConfiguration.globalSettingsFile = s4SdkGlobals.mavenGlobalSettingsFile
 
         Map npmDefaultConfiguration = ConfigurationLoader.defaultStepConfiguration(script, 'executeNpm')
-        npmDefaultConfiguration.defaultNpmRegistry = "http://s4sdk-nexus:8081/repository/npm-proxy"
+        npmDefaultConfiguration.defaultNpmRegistry = "http://cx-nexus:8081/repository/npm-proxy"
 
         if (ConfigurationLoader.stepConfiguration(script, 'executeNpm').defaultNpmRegistry) {
             println("[WARNING]: Pipeline configuration contains custom value for 'executeNpm.defaultNpmRegistry'. " +
